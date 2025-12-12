@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>
+            Fuelconsumed
+        </title>
+        <style>
+            body
+            {
+               background-color: rgb(255, 0, 0); 
+            }
+            .box
+            {
+               width: 800px;
+               height: 400px;
+               background-color: rgb(26, 255, 0);
+               border:dotted 3px rgb(0, 0, 255);
+               padding: 15px;
+               margin-top: 100px;
+               margin-left: 300px;
+               position:fixed;
+               top: 100px;
+               left: 300px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2 align="center">FUEL EFFICIENCY(Mileage) OF A VEHICLE</h2>
+            <h3 align="center">SYED MEERAN A (25008812) </h3>
+            <h2 align="center">MILEAGE CALCULATION</h2>
+            <form method="post" align="center">
+                {% csrf_token %}
+                <label>Distance Travelled:</label>
+                <input type="text" name="distance" value="{{ distance }}">
+                <br>
+                <br>
+                <label>Fuel Used:</label>
+                <input type="text" name="fuel_consumed" value="{{ fuel_consumed }}">
+                <br>
+                <br>
+                <input type="submit" value="calculate">
+                <br>
+                <label>Mileage of Vehicle:</label>
+                <input type="text" name="mileage" value="{{ mileage }}">
+            </form>
+        </div>
+    </body>
+</html>
